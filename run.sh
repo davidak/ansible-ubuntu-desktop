@@ -10,3 +10,5 @@ git clone https://github.com/davidak/ansible-ubuntu-desktop.git
 cd ansible-ubuntu-desktop
 
 ansible-playbook setup.yml --ask-sudo-pass --module-path ./ansible_modules --limit "$(hostname)"
+
+exit 0
