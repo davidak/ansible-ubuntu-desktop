@@ -2,7 +2,7 @@
 - include: chromium.yml
 - include: keepassx.yml
 - include: keepass2.yml
-  when: ansible_hostname in work
+  when: "'work' in group_names"
 
 #  - include: pre.yml
 #  - include: sublime.yml
