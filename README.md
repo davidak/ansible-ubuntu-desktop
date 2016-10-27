@@ -7,7 +7,7 @@ One-liner
 ---------
 
 ```bash
-wget -qO- https://github.com/davidak/ansible-ubuntu-desktop/blob/master/run.sh | bash
+wget -qO- https://raw.githubusercontent.com/davidak/ansible-ubuntu-desktop/master/run.sh | bash
 ```
 
 Manual Install
