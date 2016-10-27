@@ -1,6 +1,9 @@
 sudo apt-get install software-properties-common aptitude git python-simplejson
+
 sudo apt-add-repository ppa:ansible/ansible
+
 sudo apt-get update
+
 sudo apt-get install ansible
 
 cd ~
