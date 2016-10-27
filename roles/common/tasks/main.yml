@@ -1,7 +1,10 @@
 - include: packages.yml
 - include: chromium.yml
+- include: atom.yml
 - include: keepassx.yml
 - include: keepass2.yml
+  when: "'work' in group_names"
+- include: hipchat.yml
   when: "'work' in group_names"
 
 #  - include: pre.yml
