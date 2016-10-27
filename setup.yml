@@ -1,5 +1,5 @@
 - name: a playbook to setup my local machine with my basic customizations
-  hosts: local
+  hosts: all
   connection: local
   roles:
     - common

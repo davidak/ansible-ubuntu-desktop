@@ -1,67 +1,39 @@
-[![Stories in Ready](https://badge.waffle.io/JBKahn/provisioning-local.png?label=ready&title=Ready)](https://waffle.io/JBKahn/provisioning-local)
-Provisioning My PC
-============
+Provisioning Desktop-Computers
+==============================
 
-A simple ansible script to set up my machine just the way I like it (currently base on Ubuntu 14.04).
+I use this [Ansible](https://www.ansible.com/)-Configuration to provision my [Ubuntu](https://www.ubuntu.com/)-based Desktop-Computers. My Distribution is [elementary OS](https://elementary.io/)!
 
-How To Install With One Command
--------------------------------
+One-liner
+---------
 
 ```bash
-wget -qO- https://github.com/JBKahn/provisioning-local/raw/master/run.sh | bash
+wget -qO- https://github.com/davidak/ansible-ubuntu-desktop/blob/master/run.sh | bash
 ```
 
+Manual Install
+--------------
 
-How To Install The Old Fashioned Way
-------------------------------------
+### Install Ansible
 
-1. Install pip
-  ```bash
-  sudo apt-get install python-setuptools
-  sudo easy_install pip
-  ```
+```bash
+apt-get install software-properties-common aptitude git python-simplejson
+apt-add-repository ppa:ansible/ansible
+apt-get update
+apt-get install ansible
+```
 
-2. Install Ubuntu packages
-  ```bash
-  sudo apt-get install aptitude
-  sudo apt-get install git
-  sudo apt-get install python-dev libxml2-dev libxslt-dev
-  ```
-3. Setup Git
-  * [setup git](https://help.github.com/articles/set-up-git)
-  * [setup ssh keys](https://help.github.com/articles/generating-ssh-keys)
-4.  Checkout this repo and cd into the directory
-  ```bash
-  git clone https://github.com/JBKahn/provisioning-local.git <dir>
-  cd <dir>
-  ```
+### Clone Repository
 
-5. Pip install the requirements
-  ```bash
-  sudo pip install -r requirements.txt
-  ```
+```bash
+cd ~
+mkdir -p code
+cd code
+git clone https://github.com/davidak/ansible-ubuntu-desktop.git
+cd ansible-ubuntu-desktop
+```
 
-6. Fill in the variables in the [variables file ](./config.json)
+### Deploy Ansible-Config.
 
-  | variable  | Description  |
-  | :------------ |:---------------|
-  | sager_laptop     | boolean to fix keyboard colors and backlight on ubuntu for sager laptops |
-  | vagrant_url | URL to vagrant .deb file you wish to install |
-  | virtualbox_url |URL to virtual_box .deb file you wish to install |
-  | github_username | github username |
-7. Provision your local machine
-
-  ```bash
-  ansible-playbook setup.yml -i HOSTS --ask-sudo-pass --module-path ./ansible_modules --extra-vars "@config.json"
-  ```
-
-Possible Issues
----------------
-
-1. /usr/bin/ohai does not exist (Haven't hit since early development)
-
-The fix was to remove old version of ruby, use rvm and then gem install ohai
-
-http://stackoverflow.com/questions/4464985/rails-3-ruby-1-9-2-does-it-need-usr-bin-ruby1-8
-https://www.digitalocean.com/community/tutorials/how-to-install-ruby-on-rails-on-ubuntu-12-04-lts-precise-pangolin-with-rvm
-https://wiki.opscode.com/display/chef/Ohai+Installation+and+Use
+```bash
+ansible-playbook setup.yml --ask-sudo-pass --module-path ./ansible_modules --limit "$(hostname)"
+```
