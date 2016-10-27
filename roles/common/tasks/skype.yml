@@ -1,12 +1,10 @@
 - name: add ubuntu partner repo
   apt_repository:
-    repo: 'deb http://archive.canonical.com/ {{ ansible_lsb.codename }} partner'
+    repo: 'deb http://archive.canonical.com/ xenial partner'
     state: present
     update_cache: yes
-  sudo: yes
 
 - name: install skype
   apt:
     name: skype
     update_cache: yes
-  sudo: yes

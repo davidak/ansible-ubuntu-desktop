@@ -1,5 +1,11 @@
-- name: a playbook to setup my local machine with my basic customizations
-  hosts: all
+- hosts: all
   connection: local
+  become: true
+  become_user: root
   roles:
     - common
+
+- hosts: all
+  connection: local
+  roles:
+    - git

@@ -3,10 +3,8 @@
     repo: 'ppa:webupd8team/atom'
     state: present
     update_cache: yes
-  sudo: yes
 
 - name: install atom
   apt:
     name: atom
     update_cache: yes
-  sudo: yes

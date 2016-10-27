@@ -2,4 +2,3 @@
   apt:
     name: keepass2
     update_cache: yes
-  sudo: yes
