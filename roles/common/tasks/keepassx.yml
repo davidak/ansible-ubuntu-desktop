@@ -1,0 +1,5 @@
+- name: install keepassx
+  apt:
+    name: keepassx
+    update_cache: yes
+  sudo: yes

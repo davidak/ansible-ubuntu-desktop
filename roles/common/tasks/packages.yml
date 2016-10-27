@@ -1,0 +1,12 @@
+- name: install basic packages
+  apt:
+    name: "{{ item }}"
+    update_cache: yes
+  with_items:
+    - htop
+    - vim
+    - screen
+    - git
+    - ssh
+    - seahorse
+  sudo: yes
