@@ -8,8 +8,11 @@
     - screen
     - git
     - ssh
+    - sshfs
     - curl
+    - whois
     - unzip
     - tree
     - seahorse
     - virtualbox-qt
+    - remmina

@@ -1,0 +1,9 @@
+- name: install firefox
+  apt:
+    name: firefox
+    update_cache: yes
+
+- name: install firefox locale
+  apt:
+    name: firefox-locale-de
+    update_cache: yes
