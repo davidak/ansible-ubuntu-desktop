@@ -1,0 +1,15 @@
+- name: add owncloud repo key
+  apt_key:
+    url: http://download.opensuse.org/repositories/isv:ownCloud:desktop/Ubuntu_16.04/Release.key
+    state: present
+
+- name: add owncloud repo
+  apt_repository:
+    repo: 'deb http://download.opensuse.org/repositories/isv:/ownCloud:/desktop/Ubuntu_16.04/ /'
+    state: present
+    update_cache: yes
+
+- name: install owncloud-client
+  apt:
+    name: owncloud-client
+    update_cache: yes
