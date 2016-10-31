@@ -11,6 +11,8 @@
   when: "'work' in group_names"
 - include: owncloud.yml
   when: "'work' in group_names"
+- include: nagstamon.yml
+  when: "'work' in group_names"
 
 #  - include: pre.yml
 #  - include: sublime.yml

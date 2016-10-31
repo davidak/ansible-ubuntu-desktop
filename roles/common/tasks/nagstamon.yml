@@ -1,0 +1,4 @@
+- name: install nagstamon
+  apt:
+    name: nagstamon
+    update_cache: yes
