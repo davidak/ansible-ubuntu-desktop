@@ -1,0 +1,16 @@
+- name: add ring repo key
+  apt_key:
+    keyserver: pgp.mit.edu
+    state: present
+    id: A295D773307D25A33AE72F2F64CD5FA175348F84
+
+- name: add ring repo
+  apt_repository:
+    repo: 'deb https://dl.ring.cx/ring-nightly/ubuntu_16.04/ ring main'
+    state: present
+    update_cache: yes
+
+- name: install Ring
+  apt:
+    name: ring
+    update_cache: yes

@@ -5,6 +5,7 @@
 - include: keepassx.yml
 - include: keepass2.yml
   when: "'work' in group_names"
+- include: ring.yml
 - include: hipchat.yml
   when: "'work' in group_names"
 - include: skype.yml
