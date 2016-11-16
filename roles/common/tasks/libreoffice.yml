@@ -1,0 +1,13 @@
+- name: install libreoffice
+  apt:
+    name: "{{ item }}"
+    update_cache: yes
+  with_items:
+    - libreoffice
+    - libreoffice-templates
+    - libreoffice-gtk3
+    - libreoffice-style-elementary
+    - libreoffice-l10n-de
+    - hunspell-dictionary-de
+    - hyphen-de
+    - mythes-de
