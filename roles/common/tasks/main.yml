@@ -16,5 +16,5 @@
   when: "'work' in group_names"
 - include: nagstamon.yml
   when: "'work' in group_names"
-#- include: libreoffice.yml
+- include: libreoffice.yml
 - include: docker.yml
