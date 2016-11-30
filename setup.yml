@@ -4,6 +4,16 @@
     - name: get current user
       shell: whoami
       register: current_user
+    - name: Set nearly unlimited bash history size
+      lineinfile:
+        dest: /home/{{ current_user.stdout }}/.bashrc
+        regexp: 'HISTFILESIZE='
+        line: 'HISTFILESIZE=400000000'
+    - name: Set high bash history session buffer
+      lineinfile:
+        dest: /home/{{ current_user.stdout }}/.bashrc
+        regexp: 'HISTSIZE='
+        line: 'HISTSIZE=10000'
 
 - hosts: all
   connection: local
