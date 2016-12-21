@@ -1,6 +1,7 @@
 - include: packages.yml
 - include: chromium.yml
 - include: firefox.yml
+- include: brave.yml
 - include: atom.yml
 - include: keepassx.yml
 - include: keepass2.yml

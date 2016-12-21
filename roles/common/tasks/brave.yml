@@ -1,0 +1,14 @@
+- name: add brave repo key
+  apt_key:
+    url: https://s3-us-west-2.amazonaws.com/brave-apt/keys.asc
+    state: present
+
+- name: add brave repo
+  apt_repository:
+    repo: 'deb https://s3-us-west-2.amazonaws.com/brave-apt xenial main'
+    state: present
+    update_cache: yes
+
+- name: install brave
+  apt:
+    name: brave
