@@ -1,15 +1,15 @@
 - name: add hipchat repo key
   apt_key:
-    url: https://www.hipchat.com/keys/hipchat-linux.key
+    url: https://atlassian.artifactoryonline.com/atlassian/api/gpg/key/public
     state: present
 
 - name: add hipchat repo
   apt_repository:
-    repo: 'deb http://hipchat.basecom.de/clients/linux/apt stable main'
+    repo: 'deb https://atlassian.artifactoryonline.com/atlassian/hipchat-apt-client xenial main'
     state: present
     update_cache: yes
 
 - name: install hipchat
   apt:
-    name: hipchat
+    name: hipchat4
     update_cache: yes
