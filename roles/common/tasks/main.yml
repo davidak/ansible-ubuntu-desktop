@@ -3,6 +3,7 @@
 - include: firefox.yml
 - include: brave.yml
 - include: atom.yml
+- include: ghostwriter.yml
 - include: keepassx.yml
 - include: keepass2.yml
   when: "'work' in group_names"

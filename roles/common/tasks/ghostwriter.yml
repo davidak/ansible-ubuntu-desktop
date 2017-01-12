@@ -1,0 +1,9 @@
+- name: add ghostwriter repo
+  apt_repository:
+    repo: 'ppa:wereturtle/ppa'
+    state: present
+    update_cache: yes
+
+- name: install ghostwriter
+  apt:
+    name: ghostwriter
