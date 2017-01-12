@@ -19,3 +19,4 @@
   when: "'work' in group_names"
 - include: libreoffice.yml
 - include: docker.yml
+- include: flatpak.yml

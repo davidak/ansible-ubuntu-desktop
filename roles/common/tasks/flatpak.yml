@@ -1,0 +1,9 @@
+- name: add flatpak repo
+  apt_repository:
+    repo: 'ppa:alexlarsson/flatpak'
+    state: present
+    update_cache: yes
+
+- name: install flatpak
+  apt:
+    name: flatpak
