@@ -12,4 +12,3 @@
 - name: install hipchat
   apt:
     name: hipchat4
-    update_cache: yes

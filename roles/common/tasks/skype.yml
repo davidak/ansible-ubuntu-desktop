@@ -7,4 +7,3 @@
 - name: install skype
   apt:
     name: skype
-    update_cache: yes

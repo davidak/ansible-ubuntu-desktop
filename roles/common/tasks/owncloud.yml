@@ -12,4 +12,3 @@
 - name: install owncloud-client
   apt:
     name: owncloud-client
-    update_cache: yes

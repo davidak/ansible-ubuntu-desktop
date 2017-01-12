@@ -1,7 +1,6 @@
 - name: install gimp
   apt:
     name: "{{ item }}"
-    update_cache: yes
   with_items:
     - gimp
     - gimp-help-de

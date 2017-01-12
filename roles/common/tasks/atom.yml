@@ -7,4 +7,3 @@
 - name: install atom
   apt:
     name: atom
-    update_cache: yes

@@ -1,7 +1,6 @@
 - name: install pidgin
   apt:
     name: "{{ item }}"
-    update_cache: yes
   with_items:
     - pidgin
     - pidgin-gnome-keyring

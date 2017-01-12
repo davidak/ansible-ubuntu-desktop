@@ -13,4 +13,3 @@
 - name: install Ring
   apt:
     name: ring
-    update_cache: yes
