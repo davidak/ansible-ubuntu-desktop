@@ -21,3 +21,4 @@
 - include: libreoffice.yml
 - include: docker.yml
 - include: flatpak.yml
+- include: youtube-dl.yml
