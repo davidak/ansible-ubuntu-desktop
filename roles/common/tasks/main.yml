@@ -8,7 +8,7 @@
 - include: keepass2.yml
   when: "'work' in group_names"
 - include: gimp.yml
-- include: ring.yml
+#- include: ring.yml
 - include: pidgin.yml
 - include: hipchat.yml
   when: "'work' in group_names"
