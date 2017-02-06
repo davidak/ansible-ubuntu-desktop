@@ -1,0 +1,10 @@
+- name: install dependencies
+  apt:
+    name: "{{ item }}"
+  with_items:
+    - python-pip
+    - libav-tools
+
+- name: install xkcdpass
+  pip:
+    name: xkcdpass
