@@ -8,6 +8,7 @@
 - include: keepass2.yml
   when: "'work' in group_names"
 - include: xkcdpass.yml
+- include: simplescreenrecorder.yml
 - include: gimp.yml
 #- include: ring.yml
 - include: pidgin.yml

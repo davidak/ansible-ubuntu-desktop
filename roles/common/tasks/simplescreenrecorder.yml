@@ -1,0 +1,9 @@
+- name: add simplescreenrecorder repo
+  apt_repository:
+    repo: 'ppa:maarten-baert/simplescreenrecorder'
+    state: present
+    update_cache: yes
+
+- name: install simplescreenrecorder
+  apt:
+    name: simplescreenrecorder
