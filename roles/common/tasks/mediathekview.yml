@@ -1,0 +1,3 @@
+- name: install mediathekview
+  apt:
+    name: mediathekview
