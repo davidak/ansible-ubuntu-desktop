@@ -1,0 +1,9 @@
+- name: add nextcloud repo
+  apt_repository:
+    repo: 'ppa:nextcloud-devs/client'
+    state: present
+    update_cache: yes
+
+- name: install nextcloud
+  apt:
+    name: nextcloud-client
