@@ -1,3 +1,3 @@
 - name: install wire messanger
   apt:
-    deb: https://wire-app.wire.com/linux/wire_2.11.2685_amd64.deb
+    deb: https://wire-app.wire.com/linux/wire_2.12.2729_amd64.deb
