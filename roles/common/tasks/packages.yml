@@ -8,13 +8,18 @@
     - git
     - ssh
     - sshfs
+    - nfs-common
     - curl
+    - jq
     - whois
     - unzip
     - tree
     - baobab
+    - dfc
+    - gparted
     - bleachbit
     - borgbackup
     - seahorse
     - virtualbox-qt
     - remmina
+    - debian-goodies
