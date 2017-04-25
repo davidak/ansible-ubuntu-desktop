@@ -1,3 +1,18 @@
-- name: install wire messanger
+- name: install apt-transport-https
   apt:
-    deb: https://wire-app.wire.com/linux/wire_2.12.2729_amd64.deb
+    name: apt-transport-https
+
+- name: add wire repo key
+  apt_key:
+    url: http://wire-app.wire.com/linux/releases.key
+    state: present
+
+- name: add wire repo
+  apt_repository:
+    repo: 'deb https://wire-app.wire.com/linux/debian stable main'
+    state: present
+    update_cache: yes
+
+- name: install wire
+  apt:
+    name: wire-desktop
