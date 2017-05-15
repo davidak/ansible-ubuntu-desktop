@@ -15,8 +15,8 @@
 - include: pidgin.yml
 - include: hipchat.yml
   when: "'work' in group_names"
-- include: skype.yml
-  when: "'work' in group_names"
+#- include: skype.yml
+#  when: "'work' in group_names"
 - include: wire.yml
 #- include: owncloud.yml
 #  when: "'work' in group_names"
