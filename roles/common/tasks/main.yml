@@ -11,6 +11,7 @@
 - include: xkcdpass.yml
 - include: simplescreenrecorder.yml
 - include: gimp.yml
+- include: kdenlive.yml
 #- include: ring.yml
 - include: pidgin.yml
 - include: hipchat.yml
