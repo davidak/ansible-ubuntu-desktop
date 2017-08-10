@@ -27,6 +27,6 @@
   when: "'work' in group_names"
 - include: libreoffice.yml
 - include: docker.yml
-- include: flatpak.yml
-- include: youtube-dl.yml
+#- include: flatpak.yml
+#- include: youtube-dl.yml
 - include: mediathekview.yml
