@@ -1,10 +1,11 @@
 - include: packages.yml
-- include: borgbackup.yml
 - include: chromium.yml
 - include: firefox.yml
 - include: brave.yml
 - include: atom.yml
 - include: ghostwriter.yml
+- include: syncthing-gtk.yml
+- include: borgbackup.yml
 #- include: keepassx.yml
 - include: keepass2.yml
   when: "'work' in group_names"
