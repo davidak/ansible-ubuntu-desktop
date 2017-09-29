@@ -5,7 +5,7 @@
 
 - name: add brave repo
   apt_repository:
-    repo: 'deb https://s3-us-west-2.amazonaws.com/brave-apt xenial main'
+    repo: 'deb [arch=amd64] https://s3-us-west-2.amazonaws.com/brave-apt xenial main'
     state: present
     update_cache: yes
 
